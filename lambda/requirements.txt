@@ -1,0 +1,6 @@
+boto3==1.9.216
+ask-sdk-core==1.11.0
+ask-sdk-s3-persistence-adapter
+tweepy == 3.8.0
+pyqrcode == 1.2.1
+pypng == 0.0.20

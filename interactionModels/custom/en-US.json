@@ -1,0 +1,351 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "multiple tweet",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "CaptureTweetIntent",
+          "slots": [
+            {
+              "name": "TextToTweet",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{TextToTweet}"
+              ]
+            }
+          ],
+          "samples": [
+            "tweet out {TextToTweet} from all",
+            "tweet {TextToTweet} from all",
+            "tweet {TextToTweet}",
+            "tweet out {TextToTweet}"
+          ]
+        },
+        {
+          "name": "HasLastTweetIntent",
+          "slots": [],
+          "samples": [
+            "previous tweet",
+            "last tweet"
+          ]
+        },
+        {
+          "name": "AccountsIntent",
+          "slots": [],
+          "samples": [
+            "user",
+            "profile",
+            "users",
+            "profiles",
+            "accounts",
+            "account"
+          ]
+        },
+        {
+          "name": "TweetFromIntent",
+          "slots": [
+            {
+              "name": "TextToTweet",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "tweet {TextToTweet}",
+                "tweet out {TextToTweet}",
+                "i want to tweet {TextToTweet}"
+              ]
+            },
+            {
+              "name": "AccountNumbers",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "with accounts {AccountNumbers}",
+                "with {AccountNumbers}",
+                "from accounts {AccountNumbers}",
+                "{AccountNumbers}"
+              ]
+            }
+          ],
+          "samples": [
+            "tweet with accounts {AccountNumbers}",
+            "tweet with account {AccountNumbers}",
+            "tweet with {AccountNumbers}",
+            "tweet out from {AccountNumbers}",
+            "tweet from {AccountNumbers}"
+          ]
+        },
+        {
+          "name": "RemoveAccountIntent",
+          "slots": [
+            {
+              "name": "AccountNumbers",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{AccountNumbers}"
+              ]
+            }
+          ],
+          "samples": [
+            "delete {AccountNumbers}",
+            "remove {AccountNumbers}"
+          ]
+        },
+        {
+          "name": "NewPinIntent",
+          "slots": [
+            {
+              "name": "PIN",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "pin {PIN}",
+                "the pin is {PIN}",
+                "my pin is {PIN}"
+              ]
+            }
+          ],
+          "samples": [
+            "pin {PIN}",
+            "my twitter pin is {PIN}",
+            "my pin is {PIN}",
+            "my twitter code is {PIN}"
+          ]
+        },
+        {
+          "name": "NewUserIntent",
+          "slots": [],
+          "samples": [
+            "new",
+            "new account",
+            "new user"
+          ]
+        },
+        {
+          "name": "AMAZON.MoreIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateSettingsIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageUpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollRightIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollLeftIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollUpIntent",
+          "samples": []
+        },
+        {
+          "name": "LastTweetIntent",
+          "slots": [
+            {
+              "name": "TwitterName",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "last tweet {TwitterName}",
+                "last tweet of {TwitterName}"
+              ]
+            }
+          ],
+          "samples": [
+            "latest tweet of {TwitterName}",
+            "latest tweet {TwitterName}",
+            "last tweet of {TwitterName}",
+            "last tweet {TwitterName}",
+            "the last tweet of {TwitterName}"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "CaptureTweetIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "TextToTweet",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.650123647668.206739565150"
+              }
+            }
+          ]
+        },
+        {
+          "name": "TweetFromIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "TextToTweet",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1194751972271.627917431703"
+              }
+            },
+            {
+              "name": "AccountNumbers",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1194751972271.573641469303"
+              }
+            }
+          ]
+        },
+        {
+          "name": "RemoveAccountIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "AccountNumbers",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.441797514233.1168174534603"
+              }
+            }
+          ]
+        },
+        {
+          "name": "NewPinIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "PIN",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1151275012397.776935885771"
+              }
+            }
+          ]
+        },
+        {
+          "name": "LastTweetIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "TwitterName",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1572989266181.353647367728"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.650123647668.206739565150",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What would you like to tweet?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1194751972271.627917431703",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What did you want to tweet?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1194751972271.573641469303",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What account ID number did you want to tweet from?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.441797514233.1168174534603",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What are the ID numbers of the accounts you want to remove?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1151275012397.776935885771",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Follow the link or QR code and say what your pin is."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1572989266181.353647367728",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is their twitter handle. Ex. ProjectGRAS"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "27"
+}
